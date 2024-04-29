@@ -104,7 +104,7 @@ class Api {
       return fetch(`${this._address}/signup`, {
         method: 'POST',
         headers: {
-            'Access-Control-Allow-Origin': 'https://mesto.stereoslayer.nomoredomainswork.ru',
+            'Access-Control-Allow-Origin': 'https://api.mesto.stereoslayer.nomoredomainswork.ru',
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({email, password})
