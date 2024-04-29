@@ -104,6 +104,7 @@ class Api {
       return fetch(`${this._address}/signup`, {
         method: 'POST',
         headers: {
+            'Access-Control-Allow-Origin': 'https://mesto.stereoslayer.nomoredomainswork.ru',
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({email, password})
@@ -139,7 +140,7 @@ class Api {
   }
   }
   // Замените на адрес вашего бэкенда
-  const api = new Api('http://localhost:3000');
+  const api = new Api('https://api.mesto.stereoslayer.nomoredomainswork.ru');
   
   export default api;
   
