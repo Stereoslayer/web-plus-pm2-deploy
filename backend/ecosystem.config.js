@@ -8,7 +8,6 @@ const {
   DEPLOY_REF,
   DEPLOY_REPO_USER_NAME,
   DEPLOY_REPO_NAME,
-  DEPLOY_FOLDER,
 } = process.env;
 
 module.exports = {
