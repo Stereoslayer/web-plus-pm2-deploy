@@ -26,7 +26,7 @@ module.exports = {
       path: DEPLOY_PATH,
       ssh_options: 'StrictHostKeyChecking=no',
       'pre-deploy-local': `scp ./.env* ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/source/backend`,
-      'post-deploy': `cd ~/${DEPLOY_FOLDER}/source/backend/ && npm i && pm2 restart ecosystem.config.js`,
+      'post-deploy': `cd ~/${DEPLOY_FOLDER}/source/backend/src && npm i && pm2 restart ecosystem.config.js`,
     },
   },
 };
