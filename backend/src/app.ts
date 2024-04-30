@@ -23,6 +23,12 @@ app.use(cookieParser());
 app.use(routes);
 app.use(errors());
 app.use(errorHandler);
+// Тест на перезапуск pm2
+app.get('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('Сервер сейчас упадёт');
+  }, 0);
+});
 
 // eslint-disable-next-line no-console
 app.listen(PORT, () => console.log('ok'));
